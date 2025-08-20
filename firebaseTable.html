@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Post Manager</title>
+</head>
+<!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1>Post Manager</h1>
+        <button id="addBtn">Add Details</button>
+        <br><br>
+        <div id="formContainer" style="display: none; justify-content: center; align-items: center; min-height: 60vh;">
+            <div style="width: 100%; max-width: 400px; margin: auto;">
+                <h3 id="formTitle">Add New Post</h3>
+                <form id="postForm" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                    <label for="postId">ID:</label>
+                    <input type="number" id="postId" required style="width: 100%;">
+                    <label for="postContent">POST:</label>
+                    <input type="text" id="postContent" required style="width: 100%;">
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <button type="submit">Submit</button>
+                        <button type="button" id="cancelBtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <table id="dataTable" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>POST</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td colspan="3">No posts available. Click "Add Details" to create your first post!</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="script.js"></script>
+    </center>
+</body>
+
+</html>
